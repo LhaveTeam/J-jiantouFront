@@ -32,7 +32,17 @@ gulp.task('concatcss-general', function() {
 	.pipe(gulp.dest($CFG_STYLES.dest))
     .pipe(bsReload({ stream: true }));
 });
-
+gulp.task('concatcss-index', function() {
+    return gulp.src($CFG_STYLES.index_source)
+    .pipe(Plugins.changed($CFG_STYLES.dest))
+    .pipe(gulp_sass())
+	.pipe(Plugins.concat($CFG_STYLES.index_file))
+	.pipe(gulp.dest($CFG_STYLES.dest))
+	.pipe(Plugins.cleanCss($CFG_STYLES.cssMinOptions))
+	.pipe(Plugins.debug({title: '创建Css_index:'}))
+	.pipe(gulp.dest($CFG_STYLES.dest))
+    .pipe(bsReload({ stream: true }));
+});
 gulp.task('concatscss-quality',function(){
 	return gulp.src($CFG_STYLES.quality_source)
 	.pipe(Plugins.changed($CFG_STYLES.dest))
@@ -134,7 +144,7 @@ gulp.task('taskHtml', function() {
  * 其他操作处理
  * **************************************** */
 gulp.task('build', function(callback) {
-    Plugins.sequence(['clean-css', 'clean-images', 'clean-js', 'clean-html'], ['concatcss-general','concatscss-quality'], ['taskCss', 'taskImages', 'taskJs'], 'taskHtml', callback);
+    Plugins.sequence(['clean-css', 'clean-images', 'clean-js', 'clean-html'], ['concatcss-general','concatscss-quality','concatcss-index'], ['taskCss', 'taskImages', 'taskJs'], 'taskHtml', callback);
 });
 
 //创建本地服务器，并且实时更新页面文件
@@ -143,9 +153,9 @@ gulp.task('browser-sync', ['build'], function() {
 });
 
 gulp.task('default', ['browser-sync'], function() {
-    gulp.watch($CFG.watch.styles, ['taskCss','concatcss-general','concatscss-quality']);
+    gulp.watch($CFG.watch.styles, ['taskCss','concatcss-general','concatscss-quality','concatcss-index']);
     gulp.watch($CFG.watch.images, ['taskImages']);
     gulp.watch($CFG.watch.scripts, ['taskJs']);
     gulp.watch($CFG.watch.html, ['taskHtml']);
-	 gulp.watch($CFG.watch.sass_src, ['taskCss','concatcss-general','concatscss-quality']);
+	 gulp.watch($CFG.watch.sass_src, ['taskCss','concatcss-general','concatscss-quality','concatcss-index']);
 });

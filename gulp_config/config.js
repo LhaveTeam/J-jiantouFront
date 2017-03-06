@@ -30,6 +30,10 @@ module.exports = {
     styles: {
         src: __src +'/css',
 		sass_src:__src +'/sass/**/*.scss',
+		index_source:[
+			__src +'/sass/index/index.scss'//index scss
+		],
+		index_file:'index.css',
 		quality_source:[
 			__src +'/sass/quality/quality.scss'//质量功能scss
 		],
