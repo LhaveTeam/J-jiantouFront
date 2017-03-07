@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="global-html" lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta http-equiv="Cache-Control" content="no-siteapp">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta name="renderer" content="webkit">
+		<title>建投-APP</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="author" content="LHVE TEAM, www.lhave.com">
+		<meta name="copyright" content="Copyright lhave.com 版权所有">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telphone=no, email=no">
+		<meta name="wap-font-scale" content="no">
+		<link href="css/assets/mui.min.css" rel="stylesheet" type="text/css">
+		<link href="css/global.css" rel="stylesheet" type="text/css">
+		<link href="css/quality.css" rel="stylesheet" type="text/css">
+		<script id="seajsnode" src="js/sea.js"></script>
+		<script src="js/general.config.js"></script>
+	</head>
+
+	<body class="global-body jt-global-body">
+		<div class="global-container">
+			<header class="jt-header mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 id="title" class="mui-title">质量 </h1>
+			</header>
+			<nav class="mui-bar mui-bar-tab">
+				<a id="defaultTab" class="mui-tab-item mui-active" href="tab-webview-subpage-about.html"> <span class="mui-icon mui-icon-home"></span> <span class="mui-tab-label">首页</span> </a>
+				<a class="mui-tab-item" href="tab-webview-subpage-chat.html"> <span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span> <span class="mui-tab-label">工作</span> </a>
+				<a class="mui-tab-item" href="tab-webview-subpage-contact.html"> <span class="mui-icon mui-icon-contact"></span> <span class="mui-tab-label">拨号录</span> </a>
+				<a class="mui-tab-item" href="tab-webview-subpage-setting.html"> <span class="mui-icon mui-icon-gear"></span> <span class="mui-tab-label">个人</span> </a>
+			</nav>
+			<div class="mui-content jt-content">
+				<div id="slider" class="mui-slider mui-fullscreen">
+				  <div class="jt-nav-tab-bar-bg bdr-b-2">
+  					<div id="sliderSegmentedControl" class="jt-scroll-wrapper mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+  						<div class="mui-scroll">
+  							<a class="mui-control-item" href="#item1mobile">上级部门1</a>
+  							<a class="mui-control-item" href="#item2mobile">审核</a>
+  							<a class="mui-control-item mui-active" href="#item3mobile">上报</a>
+  							<a class="mui-control-item" href="#item4mobile">下达</a>
+  							<a class="mui-control-item" href="#item6mobile">验收跟踪</a>
+  							<a class="mui-control-item" href="#item3mobile">上报</a>
+  						</div>
+  					</div>
+					</div>
+					<div class="mui-card jt-column-panel">
+            <div class="mui-card-content">
+              <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                  <a class="mui-navigate-right">
+                    <i class="jt-column-ico jt-ask-ico"></i>
+                                        请示
+                  </a>
+                </li>
+                <li class="mui-table-view-cell">
+                  <a class="mui-navigate-right">
+                    <i class="jt-column-ico jt-mon-report-ico"></i>
+                                        月报
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+	<script>
+		$app.controller = 'quality';
+		$app.preferred = ['module.common'];
+		seajs.use($app.scriptDir + $app.access);
+	</script>
+
+</html>

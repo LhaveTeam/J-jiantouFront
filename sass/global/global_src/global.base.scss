@@ -86,3 +86,17 @@ $distance: 5, 10, 15, 20, 30, 40;
 }
 //编译后为 .pt-5{padding-right: .06667rem;} 其它的一样 只类名和值不一样，类名为：pr-5,pr-10 ...;pt-5,pt-10....;pl-5 ....;pb-5 .... ；数字依次为$distance中的值
 //编译后的类可以在html中加类名用  也可以用sass继承
+
+//border边框
+$bdrdirection: (t,top), (r,right), (b,bottom), (l,left);
+$borderwidth: 2, 4, 6;
+@each $bdrdirshot, $bdrdir in $bdrdirection{
+  @each $bdrw in $borderwidth {
+    .bdr-#{$bdrdirshot}-#{$bdrw}{
+      border-#{$bdrdir}: pxToRem2($bdrw) solid #e2e1e6;//用原有的函数pxToRem会报错 
+//  -webkit-transform: scaleY(.5);
+//  transform: scaleY(.5);
+    }
+    
+  }
+}

@@ -3,3 +3,19 @@
  * [QUALITY] 质量模块  上报
  * 
 ============================================================ */
+@import "../../global/global_src/global.colors.scss";
+@import "../../global/global_src/global.func.scss"; 
+.jt-global-body{
+  .mui-bar-nav~.mui-content .mui-slider.mui-fullscreen{ background-color: $bodyBackgroundColor; }
+  
+}
+.jt-content{
+  .mui-card{ margin: 0; }
+  .mui-card .mui-table-view .mui-table-view-cell:first-child, .mui-card .mui-table-view .mui-table-view-divider:first-child{ border-radius: 0; }
+  .mui-table-view-cell{ padding: 0; height: pxToRem(118px); line-height: pxToRem(118px); }
+  .mui-table-view-cell a{ margin: 0; padding: 0 pxToRem(15px);}
+  .mui-table-view-cell a .jt-column-ico{ display: inline-block; float: left; width: pxToRem(40px); height: pxToRem(40px); }
+  .mui-navigate-right:after, .mui-push-right:after{ right: 0;}
+  .mui-table-view-cell:after{ left: 0; }
+  .mui-table-view-cell>a:not(.mui-btn){ font-size: pxToRem(28px); }
+}
