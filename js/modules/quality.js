@@ -8,31 +8,23 @@ define('modules/quality', function(require, exports, module) {
 			require('pullToRefresh_material');
     
     /* ============================================================
-     * IndexPage 页面类
+     * Quality  页面类
      * ============================================================ */
+    var  m_quality = {
+    	
+    	
+    	
+    	
+    	
+    }
+    
+    
     
     
     /* ************************************************************ */
     exports.run = function() {  
         $document.ready(function() {
-		mui.init();
-		
-		$('#camera').on('tap',function(){
-			
-			
-	var cmr = plus.camera.getCamera();
-	cmr.captureImage( function ( p ) {
-		outLine( "成功："+p );
-		plus.io.resolveLocalFileSystemURL( p, function ( entry ) {
-			createItem( entry );
-		}, function ( e ) {
-			
-		} );
-	}, function ( e ) {
-		
-	}, {filename:"_doc/camera/",index:1} );
-			});
-
+			mui.init();
 			(function($) {
 				//阻尼系数
 				var deceleration = mui.os.ios?0.003:0.0009;

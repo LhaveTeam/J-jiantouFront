@@ -89,7 +89,7 @@ $distance: 5, 10, 15, 20, 30, 40;
 
 //border边框
 $bdrdirection: (t,top), (r,right), (b,bottom), (l,left);
-$borderwidth: 2, 4, 6;
+$borderwidth: 3, 4, 6;
 @each $bdrdirshot, $bdrdir in $bdrdirection{
   @each $bdrw in $borderwidth {
     .bdr-#{$bdrdirshot}-#{$bdrw}{
