@@ -83,7 +83,7 @@ define('modules/quality', function(require, exports, module) {
 
 				});
 			})(mui);
-            
+			
         });
     };
 });

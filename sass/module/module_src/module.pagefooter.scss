@@ -3,3 +3,11 @@
  * [MODULE] 最低部导航   此scss每个页面最多只能引用一次 不然会导致编译后出现 多于的重复css代码 导致页面显示不正常
  * 
 ============================================================ */
+.jt-footer-popover{
+	
+	width: 30%;
+	.mui-table-view-cell{ text-align: center; }
+	.mui-table-view-cell:after{ left: pxToRem(10px); right: pxToRem(10px); }
+	.mui-bar .mui-icon{font-size: pxToRem(24px);}
+	
+}
