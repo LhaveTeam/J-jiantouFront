@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* ============================================================
+ * [QUALITY] 质量模块  栏目列表
+ * 
+============================================================ */
+.jt-content{
+  .mui-card{ margin: 0; margin-top: pxToRem(20px); }
+  .mui-card .mui-table-view .jt-m-column-item:first-child, .mui-card .mui-table-view .mui-table-view-divider:first-child{ border-radius: 0; }
+  .jt-m-column-item{ padding: 0; height: pxToRem(118px); line-height: pxToRem(118px); }
+  .jt-m-column-item a{ margin: 0; padding: 0 pxToRem(15px);}
+  .jt-m-column-item a .jt-column-ico{ display: inline-block; float: left; margin-top: pxToRem(40px); margin-right: pxToRem(58px); width: pxToRem(40px); height: pxToRem(40px); background: url(../../../images/common/quality.png); background-size: pxToRem(400px) pxToRem(640px); }
+  .jt-m-column-item a .jt-ask-ico{ background-position: pxToRem(-100px) pxToRem(-20px); }//提示图标
+  .jt-m-column-item a .jt-mon-report-ico{ background-position: pxToRem(-100px) pxToRem(-100px); }//月报图标
+  .jt-m-column-item a .jt-mett-ico{ background-position: pxToRem(-20px) pxToRem(-20px); }//会议通知
+  .jt-m-column-item a .jt-check-ico{ background-position: pxToRem(-20px) pxToRem(-100px); }//检查通知
+  .jt-m-column-item a .jt-work-ico{ background-position: pxToRem(-20px) pxToRem(-180px); }//工作通知
+  .jt-m-column-item a .jt-arrange-ico{ background-position: pxToRem(-20px) pxToRem(-260px); }//临时工作安排
+  .jt-m-column-item a .jt-stop-ico{ background-position: pxToRem(-20px) pxToRem(-340px); }//停工令
+  .jt-m-column-item a .jt-start-ico{ background-position: pxToRem(-20px) pxToRem(-420px); }//复工通知
+  .jt-m-column-item a .jt-fine-ico{ background-position: pxToRem(-20px) pxToRem(-500px); }//罚款单
+  .jt-m-column-item a .jt-rect-ico{ background-position: pxToRem(-20px) pxToRem(-580px); }//整改通知
+  .mui-navigate-right:after, .mui-push-right:after{ right: 0;}
+  .jt-m-column-item:after{ left: 0; }
+  .jt-m-column-item>a:not(.mui-btn){ font-size: pxToRem(28px); }
+  .jt-column-txt{ position: relative; width: auto;}
+  .jt-column-txt .mui-badge{ position: absolute; top:0;right:pxToRem(-20px); padding:0; width: pxToRem(10px); height: pxToRem(10px); border-radius: 50%; text-indent: -9999px; }
+  }
