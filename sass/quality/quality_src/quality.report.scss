@@ -5,10 +5,13 @@
 ============================================================ */
 @import "../../global/global_src/global.colors.scss";
 @import "../../global/global_src/global.func.scss";
+@import "../../global/global_src/global.components.scss";
 @import "../../module/module_src/module.columnList.scss"; 
+@import "../../module/module_src/module.state.scss"; 
+@import "../../module/module_src/module.msgList.scss"; 
 .jt-global-body{
   .mui-bar-nav~.mui-content .mui-slider.mui-fullscreen{ background-color: $bodyBackgroundColor; }
-
 }
+
 
 

@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* ============================================================
+ * 状态栏
+ * 
+============================================================ */
+
+.jt-state-bar{
+  .jt-state-list{ margin: 0; padding: 0 pxToRem(15px); list-style: none; width: 100%; height: pxToRem(120px); }
+  .jt-state-item{ float: left; margin-top: pxToRem(30px); width: pxToRem(180px); height: pxToRem(60px); text-align: center; font-size: pxToRem(24px); color: #666; line-height: pxToRem(60px); }
+  .jt-state-item > span{ margin-left:pxToRem(15px); padding: pxToRem(3px) pxToRem(6px); }
+  .jt-active{ border:1px solid #ffcece; background-color: #fff; color: #ff4545; border-radius: pxToRem(30px); }
+  .jt-active > span{ background-color: transparent; color: #ff4545; }
+}
