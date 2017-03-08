@@ -218,7 +218,8 @@
 					"js/modules/module.common.js",
 					"js/library/mui.pullToRefresh.js",
 					"js/library/jquery.js",
-					"js/access.js"
+					"js/access.js",
+					"js/library/jt_app.js"
 				],
 				"refer": [],
 				"priority": 0
