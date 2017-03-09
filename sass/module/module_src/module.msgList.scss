@@ -18,6 +18,7 @@
   .jt-jobs{ width: 100%; overflow: hidden; }
   .jt-jobs em{ font-size: pxToRem(24px); font-style: normal; padding:0 pxToRem(20px); border-radius: pxToRem(5px); line-height: 1.5; }
   .jt-jobs .jt-job{ float: right; color: #fff; }
+  .jt-jobs em{ float: right; display: inline-block; padding:0 pxToRem(20px); border-radius: pxToRem(5px); color: #fff; font-size: pxToRem(24px); font-style: normal; line-height: 1.5; }
   .mui-card-footer{ margin: 0; padding: 0; min-height: 0; height: pxToRem(60px); }
   .jt-complete{ background-color: $basrListFooterBgFirst; color: #999; }//已完成字体颜色及背景颜色
   .jt-waiting{ background-color: $basrListFooterBgSecond; color: #fff; }//待批复字体颜色及背景颜色
