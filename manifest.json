@@ -223,6 +223,58 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"contact.html": {
+				"resources": [
+					"js/library/mui.pullToRefresh.material.js",
+					"js/library/jt_app.js",
+					"js/library/mui.pullToRefresh.js",
+					"js/library/jquery.js",
+					"js/library/mui.min.js",
+					"js/modules/quality.js",
+					"js/library/lodash.js",
+					"js/access.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"setting.html": {
+				"resources": [
+					"js/library/mui.pullToRefresh.material.js",
+					"js/library/jt_app.js",
+					"js/library/mui.pullToRefresh.js",
+					"js/library/jquery.js",
+					"js/library/mui.min.js",
+					"js/modules/quality.js",
+					"js/library/lodash.js",
+					"js/access.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"tab_main.html": {
+				"resources": [
+					"css/fonts/mui-icons-extra.ttf",
+					"js/sea.js",
+					"quality.html",
+					"js/library/mui.pullToRefresh.material.js",
+					"js/library/jt_app.js",
+					"css/assets/mui.min.css",
+					"js/general.config.js",
+					"js/library/mui.min.js",
+					"js/modules/quality.js",
+					"js/library/lodash.js",
+					"js/modules/module.common.js",
+					"js/library/mui.pullToRefresh.js",
+					"js/library/jquery.js",
+					"css/fonts/mui.ttf",
+					"js/access.js"
+				],
+				"refer": [
+					"contact.html",
+					"setting.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {

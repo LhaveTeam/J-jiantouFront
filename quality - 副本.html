@@ -29,10 +29,16 @@
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <h1 id="title" class="mui-title">质量 </h1>
       </header>
+      <nav class="mui-bar mui-bar-tab jt-main-nav-bar-tab">
+        <a id="defaultTab" class="mui-tab-item " href="quality.html"> <span class="mui-icon mui-icon-home-filled jt-icons"></span> <span class="mui-tab-label jt-tab-label mui-active">首页</span> </a>
+        <a class="mui-tab-item" href="#Popover_0"> <span class="mui-icon mui-icon-extra mui-icon-extra-class jt-icons"><span class="mui-badge nav-badge">9</span></span> <span class="mui-tab-label jt-tab-label">工作</span> </a>
+        <a class="mui-tab-item" href="contact.html"> <span class="mui-icon mui-icon-phone-filled jt-icons"></span><span class="mui-tab-label jt-tab-label">拨号</span> </a>
+        <a class="mui-tab-item" href="setting.html"> <span class="mui-icon mui-icon-contact mui-icon-icon-contact-filled jt-icons"></span> <span class="mui-tab-label jt-tab-label">个人</span> </a>
+      </nav>
       <div id="pullrefresh" class="mui-content jt-content">
-        <div id="slider" class="mui-slider mui-fullscreen jt-scroll-fullscreen">
+        <div id="slider" class="mui-slider mui-fullscreen">
           @@include('./tpl.nav_scroll_nostates.html')
-          <div class="mui-slider-group jt-slider-group">
+          <div class="mui-slider-group">
             <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
               <div id="scroll1" class="jt-scroll-wrapper mui-scroll-wrapper">
                 <div class="mui-scroll">
@@ -41,31 +47,8 @@
                     <li class="mui-table-view-cell"> 第1个选项卡子项-2 </li>
                     <li class="mui-table-view-cell"> 第1个选项卡子项-3 </li>
                     <li class="mui-table-view-cell">
-                      <li class="mui-table-view-cell"> 第1个选项卡子项-1 </li>
-                      <li class="mui-table-view-cell"> 第1个选项卡子项-2 </li>
-                      <li class="mui-table-view-cell"> 第1个选项卡子项-3 </li>
-                      <li class="mui-table-view-cell">
-                        <li class="mui-table-view-cell"> 第1个选项卡子项-1 </li>
-                        <li class="mui-table-view-cell"> 第1个选项卡子项-2 </li>
-                        <li class="mui-table-view-cell"> 第1个选项卡子项-3 </li>
-                        <li class="mui-table-view-cell">
-                          <li class="mui-table-view-cell"> 第1个选项卡子项-1 </li>
-                          <li class="mui-table-view-cell"> 第1个选项卡子项-2 </li>
-                          <li class="mui-table-view-cell"> 第1个选项卡子项-3 </li>
-                          <li class="mui-table-view-cell">
-                            <li class="mui-table-view-cell"> 第1个选项卡子项-1 </li>
-                            <li class="mui-table-view-cell"> 第1个选项卡子项-2 </li>
-                            <li class="mui-table-view-cell"> 第1个选项卡子项-3 </li>
-                            <li class="mui-table-view-cell">
-                              <li class="mui-table-view-cell"> 第1个选项卡子项-1 </li>
-                              <li class="mui-table-view-cell"> 第1个选项卡子项-2 </li>
-                              <li class="mui-table-view-cell"> 第1个选项卡子项-3 </li>
-                              <li class="mui-table-view-cell">
-                                <li class="mui-table-view-cell"> 第1个选项卡子项-1 </li>
-                                <li class="mui-table-view-cell"> 第1个选项卡子项-2 </li>
-                                <li class="mui-table-view-cell"> 第1个选项卡子项-3 </li>
-                                <li class="mui-table-view-cell">
-                                </li>
+                      <a href="javascript:;" id="camera">照相机</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -218,8 +201,10 @@
 
   </body>
   <script>
+    
     $app.controller = 'quality';
-    seajs.use($app.scriptDir + $app.access);
+//  $app.preferred = ['module.common'];
+    seajs.use($app.scriptDir + $app.access,function(){mui.init();});
   </script>
 
 </html>

@@ -1,54 +1,73 @@
 define('modules/module.common', function(require, exports, module) {
-    "use strict";
-    
+	"use strict";
+
+	var fnGlobalUrl = require[require.toUrl ? 'toUrl' : 'resolve'];
 	var $ = ('undefined' == typeof window.jQuery ? require('jquery') : window.jQuery);
-    var $window = $(window), $document = $(document);
-    var fnGlobalUrl = require[require.toUrl ? 'toUrl' : 'resolve'];
-    
-	var __layer = window.layer = require('layer.mobile');
-	var __layerCss = 'library/dist/layer_mobile/need/layer.css';
-	window.layer = __layer;
-	if (fnGlobalUrl) {
-		__layerCss = fnGlobalUrl(__layerCss);
-		__layerCss = '<link href="'+ __layerCss +'" rel="stylesheet" type="text/css" id="layermcss">';
-		if ($('base')[0]) {
-			$('base').before(__layerCss);
-		} else {
-			$('head').append(__layerCss);
+	var $window = $(window),
+		$document = $(document);
+		require('jt_app');
+
+	/* ============================================================
+	 * 前台页面基础类（basePage）
+	 * ============================================================ */
+	var m_basePage = window.basePage = {
+		createNew: function() {
+			var $internal = {};
+			$internal.wW = parseInt($window.width());
+			$internal.wH = parseInt($window.height());
+
+			return $internal;
 		}
-	}
-	
-    /* ============================================================
-     * 前台页面基础类（basePage）
-     * ============================================================ */
-    var m_basePage = window.basePage = {
-        createNew: function() {
-            var $internal = {};
-            $internal.wW = parseInt($window.width());
-            $internal.wH = parseInt($window.height());
-            
-            return $internal;
-        }
-    };
-    window.basePage = m_basePage;
-    module.exports = {
-        run: function() {
-			/* ============================================================
-			 * Global MUI Initialization
-			 * ============================================================ */
-			/*
-			var a = document.getElementsByTagName('a');
-			for (var i = 0; i < a.length; i++) {
-				a[i].addEventListener('touchstart', function(){}, false);
+	};
+	window.basePage = m_basePage;
+	/* ============================================================
+	 * 公共 页面类
+	 * ============================================================ */
+
+	var m_Common = {
+
+		createNew: function() {
+			var $internal = window.basePage.createNew();
+			$internal.tabar = null;
+
+			$internal.init = function() {
+				this.tabar = new $stabar();
+
 			}
-			*/
-			mui.init({
-				swipeBack: true
+			var $stabar = new Class({
+				initialize: function() {
+
+					this._init();
+				}
+
 			});
-			mui.ready(function() {});
-			
-            return;
-        }
-    };
-    
+			$stabar.extend({
+				_init: function() {
+					jt.init();  },
+				_initDom: function() {
+
+				},
+				appear: function() {
+					
+					jt.tabBar(['quality.html','g_tab_nav_popover.html','contact.html','setting.html']);
+					
+					
+				}
+
+			});
+
+			return $internal;
+		}
+	};
+	/* ************************************************************ */
+	exports.run = function() {
+		var mainTabPage = m_Common.createNew();
+				mainTabPage.init();
+
+		$document.ready(function() {
+			mainTabPage.tabar.appear();
+
+		});
+	};
+
 });
