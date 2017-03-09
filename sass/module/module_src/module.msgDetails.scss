@@ -6,7 +6,14 @@
 .js-msg-detalis{
   .mui-card{ background-color: $bodyBackgroundColor; }
   .jt-details-con p{ margin: 0; line-height: 1.5; font-size: pxToRem(24px); color: $baseFontColor; }
-  .jt-return-reason{ height: pxToRem(60px); }
-  .jt-reason{ background: $baseActiveColorSecond; color: #fff; }
+  .jt-return-reason{ width: 100%; background-color: $baseBackgroundColor; }
+  .jt-reason{ height: pxToRem(60px);  background: $baseActiveColorSecond; color: #fff; }
+  .jt-reason-txt{ padding:pxToRem(15px); overflow: hidden; font-size: pxToRem(24px); line-height: 1.5; }
+  .jt-reason-txt h5{ color: #999; }
+  .jt-reason-txt p{ color: $baseFontColor;}
+  .jt-reason-time-bar{ padding:0 pxToRem(15px); height: pxToRem(60px); background-color: $baseBackgroundColor; line-height: pxToRem(60px); }
+  .jt-reason-time{ float: right; font-size: pxToRem(24px); color: #666; }
+  .jt-reason-job-bar{ display: inline-block; }
+  .jt-reason-job{ padding: 0 pxToRem(20px); background-color: $baseActiveColorThird; color: #fff; border-radius: pxToRem(3px); font-size: pxToRem(24px); line-height: 1.5;  }
   
 } 
