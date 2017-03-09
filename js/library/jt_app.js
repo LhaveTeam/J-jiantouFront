@@ -200,14 +200,10 @@
 			 * @param {Object} arrayData Url数组
 			 */
 			tabBar: function(arrayData) {
-				
 				var subpage_style = {
 					top: '0px',
-					bottom: $('.jt-main-nav-bar-tab').height(),
+					bottom: '50px',
 					scrollIndicator: "none",
-					zindex:0,
-					duration: 800,
-					aniShow:"slide-in-right"
 				};
 				gM.plusReady(function() {
 					LH.getCurrentInterface(function(self) {

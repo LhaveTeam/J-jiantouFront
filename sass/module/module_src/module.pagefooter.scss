@@ -4,13 +4,12 @@
  * 
 ============================================================ */
 .jt-main-nav-bar-tab{
-	 height: pxToRem(110px); z-index: 1000;
+	height: pxToRem(110px);
 	.jt-icons{ font-size: pxToRem(40px); width: auto !important; height: auto !important; }
 	.jt-tab-label{ font-size: pxToRem(24px) !important; }
 	.nav-badge{ display: block; top: pxToRem(-3px); margin-left: pxToRem(-10px);  text-align: center;  border-radius: 50%; font-size: 12px; }
 }
 .jt-bar-popover{
-	z-index: 1000;
 	width: 30%;
 	.g-nav-pop-item{ text-align: center; font-size: pxToRem(24px); }
 	.g-nav-pop-item:after{ left: pxToRem(10px); right: pxToRem(10px); }
