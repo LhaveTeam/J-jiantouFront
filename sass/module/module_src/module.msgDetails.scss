@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* ============================================================
+ * 信息详情
+ * 
+============================================================ */
+.js-msg-detalis{
+  .mui-card{ background-color: $bodyBackgroundColor; }
+  .jt-details-con p{ margin: 0; line-height: 1.5; font-size: pxToRem(24px); color: $baseFontColor; }
+  .jt-return-reason{ height: pxToRem(60px); }
+  .jt-reason{ background: $baseActiveColorSecond; color: #fff; }
+  
+} 

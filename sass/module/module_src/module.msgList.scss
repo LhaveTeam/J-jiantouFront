@@ -4,7 +4,7 @@
  * 
 ============================================================ */
 .jt-msg-con{
-  .mui-card{ margin-top: pxToRem(20px); }
+  .mui-card{ margin-top: pxToRem(20px); box-shadow: none; border-bottom:1px solid #e2e1e6; }
   .mui-card:first-child{ margin-top: 0; }
   .mui-card-content-inner{ padding: pxToRem(36px) pxToRem(15px); }
   .jt-msg-txt{ font-size: pxToRem(32px); color: $baseFontColor; }
@@ -17,13 +17,15 @@
   .jt-msg-source .jt-author-ico{background-position: pxToRem(-340px) pxToRem(-20px);}
   .jt-jobs{ width: 100%; overflow: hidden; }
   .jt-jobs em{ font-size: pxToRem(24px); font-style: normal; padding:0 pxToRem(20px); border-radius: pxToRem(5px); line-height: 1.5; }
-  .jt-jobs .jt-job{ float: right; color: #fff; }
-  .jt-jobs em{ float: right; display: inline-block; padding:0 pxToRem(20px); border-radius: pxToRem(5px); color: #fff; font-size: pxToRem(24px); font-style: normal; line-height: 1.5; }
+  .jt-jobs .jt-job{ float: right; color: #fff;}
   .mui-card-footer{ margin: 0; padding: 0; min-height: 0; height: pxToRem(60px); }
   .jt-complete{ background-color: $basrListFooterBgFirst; color: #999; }//已完成字体颜色及背景颜色
   .jt-waiting{ background-color: $basrListFooterBgSecond; color: #fff; }//待批复字体颜色及背景颜色
   .jt-msg-state{ display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;  font-size: pxToRem(28px); }
   .jt-msg-state i{ margin-right: pxToRem(10px); font-size: pxToRem(32px); font-weight: bold; }
   .jt-time{ color: $baseActiveColorSecond; border:1px solid $baseActiveColorSecond; }
-  .jt-return{ width: 100%;  height: 100%;  }
+  .jt-return{width: 100%; height: 100%; line-height: pxToRem(60px); }
+  .jt-return .jt-number-bar{ display: inline-block; float: left; width: pxToRem(240px); height: 100%; background-color: $baseListRedBg;color: #fff;  text-align: center; }
+  .jt-return .jt-msg-submit{ display: inline-block; float: left; width: pxToRem(510px); height: 100%; text-align: center; }
+  .jt-redbg-opacity{ background-color: rgba(229,43,43,.1); color: #e52b2b; }
 }
