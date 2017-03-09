@@ -11,8 +11,9 @@
 }
 .jt-bar-popover{
 	z-index: 1000;
-	width: 30%;
-	.g-nav-pop-item{ text-align: center; font-size: pxToRem(24px); }
+	width: 100%;
+	.g-nav-pop-item{ text-align: center; font-size: pxToRem(64px); }
 	.g-nav-pop-item:after{ left: pxToRem(10px); right: pxToRem(10px); }
+	.g-nav-pop-item a{font-size: pxToRem(64px);}
 	
 }

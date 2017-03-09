@@ -201,17 +201,38 @@
 			 */
 			tabBar: function(arrayData) {
 				
-				var subpage_style = {
-					top: '0px',
-					bottom: $('.jt-main-nav-bar-tab').height(),
-					scrollIndicator: "none",
-					zindex:0,
-					duration: 800,
-					aniShow:"slide-in-right"
-				};
+				var subpage_style;
+				
 				gM.plusReady(function() {
 					LH.getCurrentInterface(function(self) {
 						for(var i = 0; i < arrayData.length; i++) {
+							
+							if(i==1){
+							subpage_style={
+								bottom: $('.jt-main-nav-bar-tab').height(),
+								scrollIndicator: "none",
+								zindex:10,
+								height:'220px',
+								left: $('.mui-tab-item').width(),
+								right: '40%',
+								width: '35%',
+								background:"transparent",
+								duration: 800,
+								aniShow:"slide-in-right"
+							}
+								
+							}
+							else{
+								subpage_style={
+								top: '0px',
+								bottom: $('.jt-main-nav-bar-tab').height(),
+								scrollIndicator: "none",
+								zindex:10,
+								duration: 800,
+								aniShow:"slide-in-right"
+							}
+								
+							}
 							var subpage = arrayData[i];
 							var suff = subpage.indexOf('.');
 							var objectName = subpage.substring(0, suff);
@@ -220,12 +241,19 @@
 								sub.hide();
 							}
 							self.append(sub);
+							
 						}
 					});
 				});
 				var activeTab = arrayData[0];
 				gM('.mui-bar-tab').on('tap', 'a', function(e) {
 					var targetTab = this.getAttribute('href');
+					var clickworknum=0;
+					if(targetTab!='g_tab_nav_popover.html'){
+						plus.webview.hide('g_tab_nav_popover.html');
+						
+						
+					}
 					if(targetTab == activeTab) {
 						return;
 					}
@@ -234,7 +262,21 @@
 					plus.webview.show(targetTab);
 					plus.webview.hide(activeTab);
 					activeTab = targetTab + '.html';
+					if(targetTab=='g_tab_nav_popover.html'){
+						clickworknum=clickworknum+1;
+						if(clickworknum%2==1){
+							plus.webview.show('g_tab_nav_popove');
+							
+						}else{
+							
+							plus.webview.hide('g_tab_nav_popover');
+							clickworknum=0;
+						}
+						
+					}
 				});
+				
+				
 
 				LH.receiveNotice('gohome', function() {
 					goHome();
