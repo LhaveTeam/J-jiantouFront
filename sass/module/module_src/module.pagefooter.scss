@@ -10,10 +10,9 @@
 	.nav-badge{ display: block; top: pxToRem(-3px); margin-left: pxToRem(-10px);  text-align: center;  border-radius: 50%; font-size: 12px; }
 }
 .jt-bar-popover{
-	z-index: 1000;
-	width: 100%;
-	.g-nav-pop-item{ text-align: center; font-size: pxToRem(64px); }
+
+	.g-nav-pop-item{ text-align: center; font-size: pxToRem(32px); }
 	.g-nav-pop-item:after{ left: pxToRem(10px); right: pxToRem(10px); }
-	.g-nav-pop-item a{font-size: pxToRem(64px);}
+	
 	
 }
